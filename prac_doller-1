@@ -1,0 +1,78 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP0FaTmCXLFD4cH+zKfeZ74",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/fishcanyu/shop/blob/master/prac_doller-1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 16,
+      "metadata": {
+        "id": "R4LKrQY1c5ci",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fe652141-f210-4102-e86d-7073a65a0704"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "輸入金額:\n",
+            "333\n",
+            "拾整\n",
+            "3 億\n",
+            "4 仟\n",
+            "5 佰\n",
+            "6 拾\n",
+            "7 萬\n",
+            "8 仟\n",
+            "9 佰\n",
+            "10 拾\n",
+            "11 元\n"
+          ]
+        }
+      ],
+      "source": [
+        "def practice():\n",
+        "  print(\"輸入金額:\")\n",
+        "  a=int(input())        #輸入金額\n",
+        "  b=len(str(a))        #計算金額長度\n",
+        "  if b>9:           #限制\n",
+        "    print(\"數字太大了，我們只處理到億！\") \n",
+        "    practice()   \n",
+        "    return\n",
+        "  \n",
+        "  doller = [\"億\",\"仟\",\"佰\",\"拾\",\"萬\",\"仟\",\"佰\",\"拾\",\"元\"]\n",
+        "  print(doller[b]+\"整\")\n",
+        "  for index, song in enumerate(doller, start =b):\n",
+        "    print(index, song)\n",
+        "\n",
+        "practice()"
+      ]
+    }
+  ]
+}
